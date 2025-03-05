@@ -16,6 +16,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { ThemeToggle } from "./theme-toggle";
+import { RootState } from "@/store/store";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,6 +28,8 @@ export default function Header() {
     alert(`Subscribed with email: ${email}`);
     setEmail("");
   };
+
+  const cart = useSelector((state: RootState) => state.cart);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background">
@@ -132,6 +135,11 @@ export default function Header() {
             <Link href="/cart">
               <Button variant="ghost" className="relative">
                 <ShoppingCart className="h-5 w-5" />
+                {cart.totalItems > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                    {cart.totalItems}
+                  </span>
+                )}
               </Button>
             </Link>
 
