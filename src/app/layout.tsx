@@ -4,6 +4,8 @@ import "./globals.css";
 import Footer from "@/components/global/footer";
 import Header from "@/components/global/header";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { QueryProvider } from "@/providers/query-client-provider";
+import { ReduxProvider } from "@/providers/redux-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,11 +32,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider>
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <QueryProvider>
+          <ReduxProvider>
+            <ThemeProvider>
+              <Header />
+              {children}
+              <Footer />
+            </ThemeProvider>
+          </ReduxProvider>
+        </QueryProvider>
       </body>
     </html>
   );
