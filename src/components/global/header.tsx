@@ -17,7 +17,6 @@ import {
   SheetTitle,
   SheetTrigger,
   SheetClose,
-  SheetFooter,
 } from "@/components/ui/sheet";
 import { useTheme } from "@/providers/theme-provider";
 
