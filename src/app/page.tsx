@@ -1,7 +1,7 @@
 import FeaturedPeople from "@/components/sections/featured-people";
 import HeroSection from "@/components/sections/hero-section";
 import TopOffers from "@/components/sections/top-offers";
-import Image from "next/image";
+import TopProducts from "@/components/sections/top-products";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <FeaturedPeople />
       <TopOffers />
+      <TopProducts />
     </>
   );
 }
