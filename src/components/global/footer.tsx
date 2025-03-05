@@ -7,7 +7,6 @@ import { Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { motion } from "framer-motion";
 
 export default function Footer() {
   const [email, setEmail] = useState("");

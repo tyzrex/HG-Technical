@@ -59,7 +59,7 @@ export default function Cart() {
           <ShoppingCart className="h-16 w-16 text-muted-foreground" />
           <h1 className="text-2xl font-bold">Your cart is empty</h1>
           <p className="text-muted-foreground">
-            Looks like you haven't added anything to your cart yet.
+            Looks like you haven&apos;t added anything to your cart yet.
           </p>
           <Link href="/">
             <Button>Continue Shopping</Button>
