@@ -65,7 +65,7 @@ export default function TopMembers() {
   );
 
   return (
-    <section className="py-8">
+    <section className="py-8 container">
       <div className="mb-8">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-bold">Top Members of the Month</h2>

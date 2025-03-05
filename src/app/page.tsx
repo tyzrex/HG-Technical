@@ -3,6 +3,7 @@ import FeaturedPeople from "@/components/sections/featured-people";
 import Franchise from "@/components/sections/franchise-section";
 import HeroSection from "@/components/sections/hero-section";
 import PatternsEvents from "@/components/sections/patterns-events";
+import TopMembers from "@/components/sections/top-memebers";
 import TopOffers from "@/components/sections/top-offers";
 import TopProducts from "@/components/sections/top-products";
 
@@ -22,6 +23,7 @@ export default function Home() {
       />
       <PatternsEvents />
       <Franchise />
+      <TopMembers />
     </>
   );
 }
