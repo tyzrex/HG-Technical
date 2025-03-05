@@ -15,6 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ThemeToggle } from "./theme-toggle";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +30,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
@@ -103,7 +104,7 @@ export default function Header() {
                 <SheetHeader>
                   <SheetTitle>Join Our Newsletter</SheetTitle>
                 </SheetHeader>
-                <div className="py-6">
+                <div className="px-6">
                   <p className="text-sm text-muted-foreground mb-4">
                     Subscribe to our newsletter to receive updates on new
                     products, offers, and more.
@@ -116,7 +117,10 @@ export default function Header() {
                       onChange={(e) => setEmail(e.target.value)}
                       required
                     />
-                    <Button type="submit" className="w-full">
+                    <Button
+                      type="submit"
+                      className="w-full bg-blue-500 hover:bg-blue-700"
+                    >
                       Subscribe
                     </Button>
                   </form>
@@ -124,6 +128,7 @@ export default function Header() {
               </SheetContent>
             </Sheet>
 
+            <ThemeToggle />
             <Link href="/cart">
               <Button variant="ghost" className="relative">
                 <ShoppingCart className="h-5 w-5" />
