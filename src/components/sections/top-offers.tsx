@@ -6,7 +6,6 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchProducts } from "@/services/api";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { motion, AnimatePresence } from "framer-motion";
 import ProductCard from "../reusables/product-card";
 
 export default function TopOffers() {
@@ -46,7 +45,9 @@ export default function TopOffers() {
     return (
       <section className="py-8 container">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold">Top Offers of the Month</h2>
+          <h2 className="text-2xl font-bold mb-4 borde border-b-4 border-b-green-500 w-fit">
+            Top Offers of the Month
+          </h2>
           <div className="flex items-center space-x-2">
             <Button variant="outline" size="icon" disabled>
               <ChevronLeft size={20} />
@@ -73,7 +74,9 @@ export default function TopOffers() {
   return (
     <section className="py-8 container">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl font-bold">Top Offers of the Month</h2>
+        <h2 className="text-2xl font-bold mb-4 borde border-b-4 border-b-green-500 w-fit">
+          Top Offers of the Month
+        </h2>
         <div className="flex items-center space-x-2">
           <Button
             onClick={handlePrevPage}
@@ -97,16 +100,15 @@ export default function TopOffers() {
           </Button>
         </div>
       </div>
-      <AnimatePresence mode="wait">
-        <div
-          key={currentPage}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"
-        >
-          {displayedProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      </AnimatePresence>
+
+      <div
+        key={currentPage}
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"
+      >
+        {displayedProducts.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
     </section>
   );
 }

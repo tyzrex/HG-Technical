@@ -68,25 +68,25 @@ const fetchEvents = async (): Promise<Event[]> => {
           id: 1,
           name: "Summer Tech Expo",
           date: "June 15-20, 2024",
-          image: "/placeholder.svg?height=200&width=300",
+          image: "/event1.jpg?height=200&width=300",
         },
         {
           id: 2,
           name: "Annual Gaming Convention",
           date: "July 8-12, 2024",
-          image: "/placeholder.svg?height=200&width=300",
+          image: "/event2.jpg?height=200&width=300",
         },
         {
           id: 3,
           name: "Smart Home Summit",
           date: "August 3-5, 2024",
-          image: "/placeholder.svg?height=200&width=300",
+          image: "/event3.jpg?height=200&width=300",
         },
         {
           id: 4,
           name: "Digital Photography Workshop",
           date: "September 18-20, 2024",
-          image: "/placeholder.svg?height=200&width=300",
+          image: "/event4.jpg?height=200&width=300",
         },
       ]);
     }, 800);
@@ -107,7 +107,9 @@ export default function PatternsEvents() {
   return (
     <section className="py-8 container">
       <div className="mb-8">
-        <h2 className="text-xl font-bold mb-4">Top Patterns of the Month</h2>
+        <h2 className="text-2xl font-bold mb-4 borde border-b-4 border-b-green-500 w-fit">
+          Top Patterns of the Month
+        </h2>
         {isLoadingPatterns ? (
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[...Array(6)].map((_, index) => (
@@ -136,7 +138,9 @@ export default function PatternsEvents() {
       </div>
 
       <div>
-        <h2 className="text-xl font-bold mb-4">Events of the Month</h2>
+        <h2 className="text-2xl font-bold mb-4 borde border-b-4 border-b-green-500 w-fit">
+          Events of the Month
+        </h2>
         {isLoadingEvents ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[...Array(4)].map((_, index) => (

@@ -24,13 +24,13 @@ export default function PromotionalBanner({
         <div className={`${bgColor} rounded-lg overflow-hidden`}>
           <div className="px-32">
             <div className="flex flex-col min-h-[350px] md:flex-row items-center justify-between">
-              <div className="text-white mb-4 md:mb-0">
+              <div className="text-white mt-10 md:mt-0 mb-4 md:mb-0">
                 <h2 className="text-xl md:text-2xl lg:text-5xl font-bold">
                   {title}
                 </h2>
                 <p className="text-lg md:text-xl">{subtitle}</p>
               </div>
-              <div className="relative w-32 h-32">
+              <div className="relative w-64 md:w-96 h-64 md:h-96">
                 <Image
                   src={image || "/placeholder.svg"}
                   alt={title}

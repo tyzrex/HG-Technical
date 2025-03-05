@@ -34,43 +34,6 @@ export async function fetchProductById(id: number): Promise<Product> {
   }
 }
 
-export async function fetchCategories(): Promise<string[]> {
-  try {
-    const response = await fetch(`${API_URL}/products/categories`);
-
-    if (!response.ok) {
-      throw new Error(`Error fetching categories: ${response.status}`);
-    }
-
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching categories:", error);
-    throw error;
-  }
-}
-
-export async function fetchProductsByCategory(
-  category: string
-): Promise<Product[]> {
-  try {
-    const response = await fetch(`${API_URL}/products/category/${category}`);
-
-    if (!response.ok) {
-      throw new Error(
-        `Error fetching products by category: ${response.status}`
-      );
-    }
-
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(`Error fetching products in category ${category}:`, error);
-    throw error;
-  }
-}
-
-// New function to fetch users from Fake Store API
 export async function fetchUsers(): Promise<User[]> {
   try {
     const response = await fetch(`${API_URL}/users`);

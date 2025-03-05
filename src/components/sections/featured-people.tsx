@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
 import { Skeleton } from "@/components/ui/skeleton";
-import { motion } from "framer-motion";
 import type { UserWithAvatar, User } from "@/types";
 import { fetchUsers } from "@/services/api";
 
@@ -22,32 +21,32 @@ const fetchPlatforms = async (): Promise<Platform[]> => {
         {
           id: 1,
           name: "Platform A",
-          logo: "/placeholder.svg?height=50&width=50",
+          logo: "/plat.png",
         },
         {
           id: 2,
           name: "Platform B",
-          logo: "/placeholder.svg?height=50&width=50",
+          logo: "/plat.png",
         },
         {
           id: 3,
           name: "Platform C",
-          logo: "/placeholder.svg?height=50&width=50",
+          logo: "/plat.png",
         },
         {
           id: 4,
           name: "Platform D",
-          logo: "/placeholder.svg?height=50&width=50",
+          logo: "/plat.png",
         },
         {
           id: 5,
           name: "Platform E",
-          logo: "/placeholder.svg?height=50&width=50",
+          logo: "/plat.png",
         },
         {
           id: 6,
           name: "Platform F",
-          logo: "/placeholder.svg?height=50&width=50",
+          logo: "/plat.png",
         },
       ]);
     }, 1000);
@@ -56,7 +55,6 @@ const fetchPlatforms = async (): Promise<Platform[]> => {
 
 // Helper function to generate avatar URL based on user name
 const generateAvatar = (user: User): UserWithAvatar => {
-  const fullName = `${user.name.firstname} ${user.name.lastname}`;
   // Using DiceBear API to generate avatars based on username
   const avatar = `https://api.dicebear.com/7.x/avataaars/svg?seed=${user.username}`;
   return { ...user, avatar };
@@ -77,7 +75,9 @@ export default function FeaturedPeople() {
   return (
     <section className="py-8 container mx-auto">
       <div className="mb-8">
-        <h2 className="text-xl font-bold mb-4">People</h2>
+        <h2 className="text-2xl font-bold mb-4 borde border-b-4 border-b-green-500 w-fit">
+          People
+        </h2>
         {isLoadingUsers ? (
           <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
             {[...Array(6)].map((_, index) => (
@@ -91,7 +91,7 @@ export default function FeaturedPeople() {
           <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
             {users.slice(0, 6).map((user) => (
               <div key={user.id} className="flex flex-col items-center">
-                <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mb-2 bg-blue-100">
+                <div className="relative w-full h-full rounded-full overflow-hidden mb-2 bg-blue-100">
                   <Image
                     src={user.avatar || "/placeholder.svg"}
                     alt={`${user.name.firstname} ${user.name.lastname}`}
@@ -107,7 +107,9 @@ export default function FeaturedPeople() {
       </div>
 
       <div>
-        <h2 className="text-xl font-bold mb-4">Platforms</h2>
+        <h2 className="text-2xl font-bold mb-4 borde border-b-4 border-b-green-500 w-fit">
+          Platforms
+        </h2>
         {isLoadingPlatforms ? (
           <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
             {[...Array(6)].map((_, index) => (

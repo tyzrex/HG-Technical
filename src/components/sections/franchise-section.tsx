@@ -17,20 +17,20 @@ const fetchFranchises = async (): Promise<Franchise[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve([
-        { id: 1, name: "Nike", logo: "/placeholder.svg?height=60&width=120" },
-        { id: 2, name: "Adidas", logo: "/placeholder.svg?height=60&width=120" },
-        { id: 3, name: "Puma", logo: "/placeholder.svg?height=60&width=120" },
+        { id: 1, name: "Nike", logo: "/nike.png" },
+        { id: 2, name: "Adidas", logo: "/adidas.png" },
+        { id: 3, name: "Puma", logo: "/samsung.png" },
         {
           id: 4,
           name: "Louis Vuitton",
-          logo: "/placeholder.svg?height=60&width=120",
+          logo: "/nike.png",
         },
         {
           id: 5,
           name: "Samsung",
-          logo: "/placeholder.svg?height=60&width=120",
+          logo: "/adidas.png",
         },
-        { id: 6, name: "Dell", logo: "/placeholder.svg?height=60&width=120" },
+        { id: 6, name: "Dell", logo: "/samsung.png" },
       ]);
     }, 600);
   });
@@ -45,7 +45,9 @@ export default function Franchise() {
   if (isLoading) {
     return (
       <section className="py-8 container">
-        <h2 className="text-xl font-bold mb-4">Top Franchise of the Month</h2>
+        <h2 className="text-2xl font-bold mb-4 borde border-b-4 border-b-green-500 w-fit">
+          Top Franchise of the Month
+        </h2>
         <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
           {[...Array(6)].map((_, index) => (
             <Skeleton key={index} className="aspect-square rounded-lg" />
@@ -57,7 +59,9 @@ export default function Franchise() {
 
   return (
     <section className="py-8 container">
-      <h2 className="text-xl font-bold mb-4">Top Franchise of the Month</h2>
+      <h2 className="text-2xl font-bold mb-4 borde border-b-4 border-b-green-500 w-fit">
+        Top Franchise of the Month
+      </h2>
       <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
         {franchises.map((franchise) => (
           <div key={franchise.id}>
@@ -66,7 +70,7 @@ export default function Franchise() {
                 <Image
                   src={franchise.logo || "/placeholder.svg"}
                   alt={franchise.name}
-                  width={80}
+                  width={150}
                   height={40}
                   className="object-contain"
                 />

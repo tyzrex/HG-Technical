@@ -16,7 +16,7 @@ export default function Home() {
       <PromotionalBanner
         title="SMART WEARABLE"
         subtitle="UP TO 50% OFF"
-        image="/placeholder.svg?height=200&width=200"
+        image="/smart.webp"
         bgColor="bg-blue-950"
         link="/promotions/wearables"
       />
