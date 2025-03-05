@@ -6,6 +6,7 @@ import Header from "@/components/global/header";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { QueryProvider } from "@/providers/query-client-provider";
 import { ReduxProvider } from "@/providers/redux-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Toaster richColors />
         <QueryProvider>
           <ReduxProvider>
             <ThemeProvider>
