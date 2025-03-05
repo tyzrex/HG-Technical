@@ -59,14 +59,14 @@ export default function Franchise() {
 
   return (
     <section className="py-8 container">
-      <h2 className="text-2xl font-bold mb-4 borde border-b-4 border-b-green-500 w-fit">
+      <h2 className="text-2xl font-bold mb-4  border-b-4 border-b-green-500 w-fit">
         Top Franchise of the Month
       </h2>
       <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
         {franchises.map((franchise) => (
           <div key={franchise.id}>
             <Link href={`/franchise/${franchise.id}`} className="block">
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-4 aspect-square flex items-center justify-center hover:shadow-md transition-shadow border">
+              <div className="bg-white rounded-lg p-4 aspect-square flex items-center justify-center hover:shadow-md transition-shadow border">
                 <Image
                   src={franchise.logo || "/placeholder.svg"}
                   alt={franchise.name}

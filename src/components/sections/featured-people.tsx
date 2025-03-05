@@ -26,22 +26,22 @@ const fetchPlatforms = async (): Promise<Platform[]> => {
         {
           id: 2,
           name: "Platform B",
-          logo: "/plat.png",
+          logo: "/plat2.jpeg",
         },
         {
           id: 3,
           name: "Platform C",
-          logo: "/plat.png",
+          logo: "/plat3.png",
         },
         {
           id: 4,
           name: "Platform D",
-          logo: "/plat.png",
+          logo: "/plat2.jpeg",
         },
         {
           id: 5,
           name: "Platform E",
-          logo: "/plat.png",
+          logo: "/plat3.png",
         },
         {
           id: 6,
@@ -72,6 +72,8 @@ export default function FeaturedPeople() {
     queryFn: fetchPlatforms,
   });
 
+  console.log(users);
+
   return (
     <section className="py-8 container mx-auto">
       <div className="mb-8">
@@ -91,7 +93,7 @@ export default function FeaturedPeople() {
           <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
             {users.slice(0, 6).map((user) => (
               <div key={user.id} className="flex flex-col items-center">
-                <div className="relative w-full h-full rounded-full overflow-hidden mb-2 bg-blue-100">
+                <div className="relative w-16 h-16 md:w-32 md:h-32 rounded-full overflow-hidden mb-2 bg-blue-100">
                   <Image
                     src={user.avatar || "/placeholder.svg"}
                     alt={`${user.name.firstname} ${user.name.lastname}`}
@@ -126,9 +128,9 @@ export default function FeaturedPeople() {
                 <Image
                   src={platform.logo || "/placeholder.svg"}
                   alt={platform.name}
-                  width={40}
-                  height={40}
-                  className="object-contain"
+                  width={300}
+                  height={300}
+                  className="object-cover w-full h-full"
                 />
               </div>
             ))}

@@ -27,32 +27,32 @@ const fetchPatterns = async (): Promise<Pattern[]> => {
         {
           id: 1,
           name: "Modern Minimalist",
-          image: "/placeholder.svg?height=150&width=150",
+          image: "/minimal.jpg?height=150&width=150",
         },
         {
           id: 2,
           name: "Vintage Classic",
-          image: "/placeholder.svg?height=150&width=150",
+          image: "/vintage.jpg?height=150&width=150",
         },
         {
           id: 3,
           name: "Bold Geometric",
-          image: "/placeholder.svg?height=150&width=150",
+          image: "/bold.webp?height=150&width=150",
         },
         {
           id: 4,
           name: "Natural Organic",
-          image: "/placeholder.svg?height=150&width=150",
+          image: "/natural.jpeg?height=150&width=150",
         },
         {
           id: 5,
           name: "Tech Futuristic",
-          image: "/placeholder.svg?height=150&width=150",
+          image: "/tecg.webp?height=150&width=150",
         },
         {
           id: 6,
           name: "Elegant Luxury",
-          image: "/placeholder.svg?height=150&width=150",
+          image: "/luxury.jpg?height=150&width=150",
         },
       ]);
     }, 800);
