@@ -19,18 +19,18 @@ const fetchFranchises = async (): Promise<Franchise[]> => {
       resolve([
         { id: 1, name: "Nike", logo: "/nike.png" },
         { id: 2, name: "Adidas", logo: "/adidas.png" },
-        { id: 3, name: "Puma", logo: "/samsung.png" },
+        { id: 3, name: "Puma", logo: "/puma.png" },
         {
           id: 4,
           name: "Louis Vuitton",
-          logo: "/nike.png",
+          logo: "/lv.png",
         },
         {
           id: 5,
           name: "Samsung",
-          logo: "/adidas.png",
+          logo: "/samsung.png",
         },
-        { id: 6, name: "Dell", logo: "/samsung.png" },
+        { id: 6, name: "Dell", logo: "/dell.png" },
       ]);
     }, 600);
   });

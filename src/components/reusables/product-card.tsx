@@ -44,7 +44,7 @@ export default function ProductCard({
 
   return (
     <div
-      className={`group relative bg-white dark:bg-gray-800 rounded-lg overflow-hidden border hover:shadow-md transition-shadow ${
+      className={`group relative h-full bg-white dark:bg-gray-800 rounded-lg overflow-hidden border hover:shadow-md transition-shadow ${
         featured ? "col-span-2 row-span-2" : ""
       }`}
     >
